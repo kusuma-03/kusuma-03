@@ -18,3 +18,20 @@ public class Main
 	
 	}
 }
+//wrapper class
+
+class Main{
+    public static void main(String args[]){
+    int j=20;
+    Integer obj1=Integer.valueOf(j);
+    System.out.println(obj1);
+    Integer obj2=new Integer(35);
+    System.out.println(obj2);
+    //Autoboxing
+    Float ob=new Float(600f);
+    System.out.println(ob);
+    //unboxing
+    int num=obj1.intValue();
+    System.out.println(num);
+}
+}
