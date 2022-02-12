@@ -1,0 +1,101 @@
+#usage of this keyword
+public class Main {
+    int xp;
+    String s;
+    float d;
+    String sp;
+    Main(){
+        System.out.println("this is overloaded");
+    }
+    Main(int x){
+        this();
+    System.out.println(x);
+    }
+    void Display(int xp,String s,float d){
+        xp=this.xp;
+        s=this.s;
+        d=this.d;
+        System.out.print(xp,s,d);
+    }
+   
+    public static void main(String args[]) {
+    
+      Main obj=new Main(100);
+     obj.Display(20,"indhu",305f);
+    }
+}
+
+
+#garbage collection
+
+public class Main{ 
+ public static void main(String args[]){ 
+ /* Here we are intentionally assigning a null 
+ * value to a reference so that the object becomes
+ * non reachable
+ */
+Main obj=new Main(); 
+obj=null; 
+ /* Here we are intentionally assigning reference a 
+ * to the another reference b to make the object referenced
+ * by b unusable.
+ *
+*/
+
+System.gc(); 
+ } 
+ protected void finalize() throws Throwable
+ {
+ System.out.println("Garbage collection is performed by JVM");
+ }
+}
+
+
+
+#constructor overloading
+
+public class Main{
+    int x,y,z,p;
+    Main(int x,int y,int z){
+       System.out.println(x+y+z);
+    }
+    Main(int x,int y,int z,int p){
+     System.out.println(x+y+z+p);
+    }public static void main(String args[]){
+        Main obj=new Main(20,30,40);
+     Main obj2=new Main(20,30,40,50);
+        
+    }
+    
+    
+}
+
+
+
+#Strings in java
+public class Main
+{
+  public static void main (String args[])
+  {
+    String m = "lachimolala";
+      System.out.println (m);
+    //methods on string class;
+    //Actutally string is a non primitive data TypeNotPresentException
+    //string is a class and we are creating an obj to that cklass and using that string
+ System.out.println (m.charAt(4));
+  System.out.println (m.toUpperCase());
+   System.out.println (m.toLowerCase());
+    System.out.println (m.substring(5));
+     System.out.println (m.replace('l','*'));
+      String sp=new String("call me baby");
+       System.out.println (sp);
+       String pb=new String("i want you");
+        System.out.println (pb);
+         System.out.println (sp+pb);
+         String k="ammu";
+         String p="lmmu";
+          System.out.println (k==p);
+      
+  }
+}
+
